@@ -2,23 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Assignment 3</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Image Mapping Assignment</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Assignment 3: Web Page Basics</h1>
-</header>
+    <!-- Heading -->
+    <h1>Image Mapping Assignment</h1>
 
-<section>
-    <p>Name: Crystal Michelle Boswell</p>
+    <!-- Your Name -->
+    <p>Name: Your Name Here</p>
+
+    <!-- Date -->
     <p>Date: February 10, 2026</p>
 
-    <h2>Example Image</h2>
-    <img src="media/ch03_image-to-map.jpg" alt="Downloaded example" width="250">
-</section>
+    <!-- Responsive Image -->
+    <img src="media/ch03_image-to-map.jpg"
+         alt="CMS Website Illustration"
+         usemap="#cmsmap">
+
+    <!-- Image Map -->
+    <map name="cmsmap">
+
+        <!-- Rectangle (CMS Circle Area) -->
+        <area shape="rect"
+              coords="1330,1330,1940,1940"
+              href="https://en.wikipedia.org/wiki/Content_management_system"
+              alt="CMS Information"
+              target="_blank">
+
+        <!-- Circle (Cloud Database Area) -->
+        <area shape="circle"
+              coords="1024,350,200"
+              href="https://aws.amazon.com/what-is-cloud-storage/"
+              alt="Cloud Storage"
+              target="_blank">
+
+        <!-- Polygon (Main Webpage Screen Area) -->
+        <area shape="poly"
+              coords="650,500, 1400,500, 1400,1500, 650,1500"
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map"
+              alt="HTML Image Maps"
+              target="_blank">
+
+    </map>
+
+    <!-- Image Map Resizer Script -->
+    <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+    <script>
+        window.onload = function() {
+            imageMapResize();
+        };
+    </script>
 
 </body>
 </html>
+
 
